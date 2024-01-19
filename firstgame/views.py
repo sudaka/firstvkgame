@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'index.html')
+    curget = str(request.GET)
+    return render(request, 'index.html', {"getparam": curget})
 

@@ -90,3 +90,21 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SECURE_CONTENT_TYPE_NOSNIFF = False
+
+#LOGGING = {
+#    "version": 1,
+#    "disable_existing_loggers": False,
+#    "handlers": {
+#        "file": {
+#            "level": "DEBUG",
+#            "class": "logging.FileHandler",
+#            "filename": os.path.join(BASE_DIR, 'requestinfo.log')
+#        },
+#    },
+#    "loggers": {
+#        "django": {
+#            "handlers": ["file"],
+#            "level": "INFO",
+#        }
+#    }
+#}
