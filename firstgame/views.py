@@ -6,5 +6,5 @@ def index(request):
     curget = str(request.GET)
     pkey = cur_settings.VK_PRIVATE_KEY
     (checkresult, state) = checksign(pkey, curget)
-    return render(request, 'index.html', {"getparam": checkresult})
+    return render(request, 'index.html', {"getparam": state})
 
