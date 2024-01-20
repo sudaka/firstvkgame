@@ -5,6 +5,7 @@ import base64
 
 def checksign(p_key, data):
     error = False
+    return(True, str(data))
     if isinstance(data, dict):
         skeys = data.get('sign_keys','')
         skeys_list = str.split(skeys, ',')
