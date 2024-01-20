@@ -8,7 +8,7 @@ def checksign(p_key, data):
     if isinstance(data, dict):
         rdata = {}
         for key, val in data.items():
-            rdata[key] = val
+            rdata[key] = val[0]
         return(True, str(rdata))
         skeys = data.get('sign_keys','')
         skeys_list = str.split(skeys, ',')
