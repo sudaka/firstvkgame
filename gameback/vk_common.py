@@ -17,7 +17,7 @@ def checksign(p_key, rdata):
         signed_data = {}
         for key in skeys_list:
             signed_data[key] = data.get(key, '')
-        return(True, str(signed_data))
+        #return(True, str(signed_data))
         forsignstr = parse.urlencode(signed_data)
         raw = forsignstr.encode("utf-8")
         curkey = p_key.encode("utf-8")
