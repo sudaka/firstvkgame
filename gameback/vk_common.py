@@ -3,13 +3,15 @@ from hashlib import sha256
 import hmac
 import base64
 
-def checksign(p_key, data):
+def checksign(p_key, rdata):
     error = False
-    if isinstance(data, dict):
-        rdata = {}
-        for key, val in data.items():
-            rdata[key] = val[0]
-        return(True, str(rdata))
+    if isinstance(rdata, dict):
+        data = {}
+        for key, val in rdata.items():
+            if len(val)>0:
+                data[key] = val[0]
+            else:
+                data[key] = ''
         skeys = data.get('sign_keys','')
         skeys_list = str.split(skeys, ',')
         signed_data = {}
